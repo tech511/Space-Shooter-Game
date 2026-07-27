@@ -2,8 +2,9 @@ import turtle
 
 from settings import *
 from stars import StarField
+from player import Player
 
-# Create screen
+# Screen
 screen = turtle.Screen()
 screen.setup(WIDTH, HEIGHT)
 screen.bgcolor(BACKGROUND)
@@ -11,8 +12,14 @@ screen.title(TITLE)
 
 screen.tracer(0)
 
-# Create stars
-stars = StarField(180)
+# Objects
+stars = StarField()
+player = Player()
+
+# Keyboard
+screen.listen()
+screen.onkeypress(player.move_left, "Left")
+screen.onkeypress(player.move_right, "Right")
 
 # Game Loop
 while True:
