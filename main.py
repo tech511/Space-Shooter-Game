@@ -8,6 +8,7 @@ from enemy import Enemy
 from explosion import Explosion
 from collision import check_collisions
 from score import Score
+from lives import Lives
 
 # Screen
 screen = turtle.Screen()
@@ -24,6 +25,7 @@ bullet = Bullet()
 enemy = Enemy()
 explosion = Explosion()
 score = Score()
+lives = Lives()
 
 # Keyboard
 screen.listen()
